@@ -1,4 +1,6 @@
 #!/usr/bin/env node
-import runIsEvenGame from '../src/even-game.js';
+import evenGame from '../src/games/even-game.js';
+import runGame from '../src/index.js';
+import getPlayer from '../src/cli.js';
 
-runIsEvenGame();
+runGame(getPlayer(), evenGame.description, evenGame.getRound);

@@ -2,7 +2,7 @@ import getRandomNumber from '../utils/getRandomNumber.js';
 
 const getRandomOperator = () => {
   const operators = '+-*';
-  const randomIndex = getRandomNumber(operators.length - 1);
+  const randomIndex = getRandomNumber(0, operators.length - 1);
   return operators[randomIndex];
 };
 

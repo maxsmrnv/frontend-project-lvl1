@@ -9,11 +9,9 @@ const getProgression = () => {
 const getProgressionGameRound = () => {
   const progression = getProgression();
   const hiddenIndex = getRandomNumber(0, progression.length - 1);
+
   return {
-    question: [
-      ...progression.slice(0, hiddenIndex),
-      '..',
-      ...progression.slice(hiddenIndex + 1)].join(' '),
+    question: progression.map((el, idx) => (idx === hiddenIndex ? '..' : el)).join(' '),
     answer: progression[hiddenIndex],
   };
 };

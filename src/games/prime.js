@@ -1,4 +1,5 @@
 import getRandomNumber from '../utils/getRandomNumber.js';
+import getYesNoAnswer from '../utils/getYesNoAnswer.js';
 
 const isPrime = (n) => {
   for (let i = 2; i < n; i += 1) {
@@ -11,7 +12,7 @@ const getPrimeGameRound = () => {
   const value = getRandomNumber();
   return {
     question: value,
-    answer: isPrime(value) ? 'yes' : 'no',
+    answer: getYesNoAnswer(isPrime(value)),
   };
 };
 
